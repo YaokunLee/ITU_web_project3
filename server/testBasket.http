@@ -1,0 +1,83 @@
+
+// get all winedata
+GET http://localhost:3000/basket/abc HTTP/1.1
+###
+
+// get all winedata by id
+PUT http://localhost:3000/basket/updateAllItems HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "new_basket": [] }
+###
+
+// get all winedata by id
+PUT http://localhost:3000/basket/updateAllItems HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "new_basket": [
+  {
+    "wine_id": 15,
+    "wine_name": "Sicilian",
+    "number": 10,
+    "price": 39.99
+  },
+  {
+    "wine_id": 13,
+    "wine_name": "Sicilian",
+    "number": 10,
+    "price": 39.99
+  }
+]
+}
+###
+
+
+// get all winedata
+GET http://localhost:3000/basket/lyk HTTP/1.1
+###
+
+// get all winedata by id
+PUT http://localhost:3000/basket/updateOneItem HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "itemInfo":
+  {
+    "wine_id": 15,
+    "wine_name": "Sicilian",
+    "number": 100,
+    "price": 39.99
+  }
+}
+###
+
+
+// get all winedata by id
+PUT http://localhost:3000/basket/updateOneItem HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "itemInfo":
+{
+  "wine_id": 13,
+  "wine_name": "Sicilian",
+  "number": 1000,
+  "price": 39.99
+}
+}
+###
+
+
+// get all winedata
+GET http://localhost:3000/basket/lyk HTTP/1.1
+###
+
+
+// get all winedata by id
+DELETE http://localhost:3000/basket/deleteOneItem HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "wine_id": "13"}
+###
+
+// get all winedata
+GET http://localhost:3000/basket/lyk HTTP/1.1
+###

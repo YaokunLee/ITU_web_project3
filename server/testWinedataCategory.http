@@ -1,0 +1,13 @@
+
+// get all winedata
+GET http://localhost:3000/winedatacategory/White HTTP/1.1
+###
+
+// get all winedata
+GET http://localhost:3000/winedataorigin/Spain HTTP/1.1
+###
+
+// get all winedata
+GET http://localhost:3000/winedatayear/2015 HTTP/1.1
+###
+

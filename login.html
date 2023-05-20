@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baco: your minimalistic wine shop</title>
+  <link rel="icon" type="" href="baco.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tilt+Prism">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="common.css">
+
+  <script src="winedata.js"></script>
+  <script src="login.js"></script>
+</head>
+
+<body>
+  <header id="header">
+		<div style="display: flex">
+      <div class="login"><a href="index.html">Home</a></div>
+		  <div class="login"><a href="login.html">Login</a></div>
+		  <div><a href="basket.html"><img src="shopping cart icon.png" alt="shopping cart icon" class="icons"></a>  &nbsp &nbsp   </div>
+		</div>
+	</header>
+  
+	  <div class="banner">
+		<a href="index.html">
+		  <img
+			class="logo"
+			src="baco.png"
+			alt="Drawing of Baco, the Roman God of wine"
+		  />
+		  <span class="brandname">BACO</span>
+		</a>
+		<!-- <div class="logotext">Divine wine, plebeian prices</div>-->
+	  </div>
+
+<!-- 	<header id="header">
+		<div style="display: flex;">
+			<div><a href="basket.html"><img src="shopping cart icon.png" alt="shopping cart icon" class="icons"></a>  &nbsp &nbsp   </div>
+			<div class="login"><a href="login.html">Login</a></div>
+		</div>
+	</header>
+
+  <div class="banner"> 
+    <a href="index.html">
+    <img class= "logo" src="baco.png" alt="Drawing of Baco, the Roman God of wine">
+    <div class="brandname">
+        BACO
+    </div>
+    </a>
+  </div>
+
+
+  <div  id="welcome_words_area"> 
+    <h3 id="welcome_name_area"> Welecome to BACO online wine shop!</h3> 
+    <h4> What's your divine preference? </h4>
+</div>
+
+	<div class="filters">
+		<button>RED</button>
+		<button>WHITE</button>
+		<button>ROSE</button>
+		<button>CHAMPAGNE</button>
+	</div>
+
+	<div class="filters">
+		<button>Italy</button>
+		<button>France</button>
+		<button>Portugal</button>
+		<button>Germany</button>
+	</div> -->
+
+
+<div>
+  <br>
+  <br>
+  <div class="container-fluid">
+    <form class="loginframe">
+      <label class="account">Name:</label>
+      <input class="form-input"  id="account" type="text" value="" /><br/><p></p>
+      <label class="password">Password:</label>
+      <input class="form-input" id="password" type="password" value="" /><br/><br/>
+      <input class="btn-submit"  type="button" onclick="onSubmitLogin()" value="SUBMIT" />
+    </form>
+  </div>
+
+
+  
+</div>
+
+<footer class= "foot">
+  <div class = "footdiv">
+    <div class="footer-container">
+      <div class="column-left">
+        <h3 class="footer-h3">About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <div class="column-right">
+        <h3 class="footer-h3">Opening Hours</h3>
+        <ul>
+          <li>Monday - Friday: 9am - 6pm</li>
+          <li>Saturday: 10am - 5pm</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>        
+    <div class = "footbanner">
+      <h3 style="font-size:16px;"class= "minimalistic" id="welcome_name_area">your minimalistic wine shop</h3>
+    </div>
+    <div class ="socialmedia"> 
+      <img src="iglogo.png">
+      <img src="fblogo.png"/>
+      <img src="ttlogo.png">
+    </div>
+  </div>
+</footer> 
+
+<script>
+  function onLoginStart() {   
+      // addUserNameToWelcome();
+  }
+  document.body.onload = onLoginStart();
+</script>
+</body>
+</html>

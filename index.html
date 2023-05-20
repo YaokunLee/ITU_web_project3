@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Baco: your minimalistic wine shop</title>
+    <link rel="icon" type="" href="baco.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tilt+Prism"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Staatliches"
+    />
+    <link
+      href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="common.css" />
+    <script src="basketdata.js"></script>
+    <script src="winedata.js"></script>
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <div style="display: flex">
+        <div class="login"><a href="login.html">Login</a></div>
+        <div>
+          <a href="basket.html"
+            ><img
+              src="shopping cart icon.png"
+              alt="shopping cart icon"
+              class="icons"
+              id="#icon-change"
+          /></a>
+          &nbsp &nbsp
+        </div>
+      </div>
+    </header>
+
+    <div class="banner">
+      <a href="index.html">
+        <img
+          class="logo"
+          src="baco.png"
+          alt="Drawing of Baco, the Roman God of wine"
+        />
+        <span class="brandname">BACO</span>
+      </a>
+      <!-- <div class="logotext">Divine wine, plebeian prices</div>-->
+    </div>
+    <div id="welcome_words_area">
+      <h3 id="welcome_name_area">your minimalistic wine shop</h3>
+    </div>
+    <div>
+      <!-- <div id="welcome_words_area">
+        <br>
+        <h3 id="welcome_name_area">Welcome to BACO online wine shop!</h3>
+        <h4>What's your divine preference?</h4>
+      </div> -->
+
+      <div>
+        <img id="banner" src="wine day, extra narrow.jpg" alt="Banner Event" />
+      </div>
+
+      <div>
+        <form class="search-bar">
+          <input
+            type="text"
+            class="search"
+            placeholder="Search for wine name, type or country"
+            name=""
+            value=""
+            action=""
+          />
+          <button id="search-btn">
+            <img id="search-icon" src="search icon baco.png"
+          </button>
+        </form>
+      </div>
+      <br />
+      <br />
+
+      <!-- <div class="filters">
+        <span class="filter-btn"> <a href=""></a>RED</span>
+        <span class="menu_dividing_line" ></span>
+        <span class="filter-btn">WHITE</span>
+        <span class="menu_dividing_line"></span>
+        <span class="filter-btn">ROSE</span>
+        <span class="menu_dividing_line"></span>
+        <span class="filter-btn">CHAMPAGNE</span>
+      </div>
+      
+      <div class="filters">
+        <span class="filter-btn"><a href="Filter_France.html">FRANCE</a></span>
+        <span class="menu_dividing_line"></span>
+        <span class="filter-btn"><a href="filter_USA.html">USA</a></span>
+        <span class="menu_dividing_line"></span>
+        <span class="filter-btn"><a href="Filter_Italy.html">ITALY</a></span>
+        <span class="menu_dividing_line"></span>
+        <span class="filter-btn"><a href="Filter_Spain.html">SPAIN</a></span>
+      </div> -->
+
+      <!-- <div class="filters">
+        <span class="filter-btn">Italy</span>
+        <span class="filter-btn"> France</span>
+        <span class="filter-btn">Portugal</spanton>
+        <span class="filter-btn">Spain</span>
+      </div> we will put this in the filter page-->
+      <div class="mainbody">
+        <div class="leftside">
+          <div class="leftside_box">
+            <h3 class="inside_text">FILTER WINES</h3>
+            <br>
+            <h4 class="inside_text">Origin</h4>
+            <form>
+              <div>
+                <input type="checkbox" name="filter" value="France" /> France
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" /> USA
+                </label>
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" /> Spain
+                </label>
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" /> Italy
+                </label>
+              </div>
+            </form>
+            <br />
+            <h4 class="inside_text">Type</h4>
+            <form>
+              <div>
+                <input type="checkbox" name="filter" value="France" /> Red
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" /> White
+                </label>
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" /> Rose
+                </label>
+              </div>
+              <div>
+                <label
+                  ><input type="checkbox" name="filter" value="France" />
+                  Champgne
+                </label>
+              </div>
+            </form>
+            <br />
+            <h4 class="inside_text">Up to this price</h4>
+            <form action="">
+              <span>$0</span>
+              <input
+                type="range"
+                id="price-range"
+                name="price-range"
+                min="0"
+                max="100"
+                value="0"
+              />
+              <span>$100</span>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div><h3 class="inside_text">Discover our newest premium wines</h3></div>
+          <div class="productgrid">
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(1)"
+              >
+                <div><img src="img/wine_1.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_1_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_1_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_1_wine_from">From</span>
+                  <!--<span class="prodbox-country" id="product_1_wine_country"
+                  >Country</span
+                >-->
+                  <!--this seems to be redundant-->
+                </div>
+                <div class="prodbox-price" id="product_1_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(1)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(2)"
+              >
+                <div><img src="img/wine_2.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_2_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_2_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_2_wine_from">From</span>
+                  <!--<span class="prodbox-country" id="product_2_wine_country"
+                  >Country</span
+                -->
+                  <!--this seems to be redundant-->
+                </div>
+                <div class="prodbox-price" id="product_2_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(2)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(3)"
+              >
+                <div><img src="img/wine_3.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_3_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_3_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_3_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_3_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_3_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(3)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(4)"
+              >
+                <div><img src="img/wine_4.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_4_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_4_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_4_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_4_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_4_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(4)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(5)"
+              >
+                <div><img src="img/wine_5.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_5_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_5_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_5_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_5_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_5_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(5)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(6)"
+              >
+                <div><img src="img/wine_6.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_6_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_6_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_6_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_6_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_6_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(6)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(7)"
+              >
+                <div><img src="img/wine_7.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_7_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_7_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_7_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_7_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_7_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(7)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(8)"
+              >
+                <div><img src="img/wine_8.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_8_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_8_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_8_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_8_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_8_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(8)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(9)"
+              >
+                <div><img src="img/wine_9.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_9_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_9_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_9_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_9_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_9_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(9)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(10)"
+              >
+                <div><img src="img/wine_10.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_10_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_10_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_10_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_10_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_10_wine_price">
+                  price
+                </div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(10)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(11)"
+              >
+                <div><img src="img/wine_11.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_11_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_11_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_11_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_11_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_11_wine_price">
+                  price
+                </div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(11)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(12)"
+              >
+                <div><img src="img/wine_12.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_12_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_12_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_12_wine_from">From</span>
+                  <!-- <span class="prodbox-country" id="product_12_wine_country"
+                  >Country</span
+                > -->
+                </div>
+                <div class="prodbox-price" id="product_12_wine_price">
+                  price
+                </div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(12)"
+                  value="ADD TO CART"
+                />
+                <!-- add function on click -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer class="foot">
+      <div class="footdiv">
+        <div class="footer-container">
+          <div class="column-left">
+            <h3 class="footer-h3 inside_text">About</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li>
+                <a href="terms_and_conditions.html">Terms and Conditions</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column-right">
+            <h3 class="footer-h3 inside_text">Opening Hours</h3>
+            <ul>
+              <li>Monday - Friday: 9am - 6pm</li>
+              <li>Saturday: 10am - 5pm</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footbanner">
+          <h3
+            style="font-size: 16px"
+            class="minimalistic"
+            id="welcome_name_area"
+          >
+            your minimalistic wine shop
+          </h3>
+        </div>
+        <div class="socialmedia">
+          <img src="iglogo.png" />
+          <img src="fblogo.png" />
+          <img src="ttlogo.png" />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function onIndexStart() {
+        addUserNameToWelcome();
+        addAllHomepageProductInfo();
+      }
+      document.body.onload = onIndexStart();
+    </script>
+  </body>
+</html>

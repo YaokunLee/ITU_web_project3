@@ -1,0 +1,22 @@
+
+// get all winedata
+GET http://localhost:3000/user/abc HTTP/1.1
+###
+
+// get all winedata by id
+PUT http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{"name": "lyk",  "password": "123456", "basket": [] }
+###
+
+
+GET http://localhost:3000/user/lyk HTTP/1.1
+###
+
+// get all winedata by id
+PUT http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{"name": "Lee",  "password": "123456"}
+###
