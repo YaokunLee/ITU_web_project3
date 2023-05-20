@@ -13,6 +13,10 @@ all you need to know before you start to work on this project:
   
   **the folder data copies all js file directly from mini project1**
 
+## React Components implemented by me, you may use that when building pages.
+  - header (in index/Header.js)
+  - footer (in index/Footer.js)
+
 ## How to verify React Component you create is correct?
 
 ```javascript
