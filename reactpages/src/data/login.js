@@ -8,7 +8,7 @@ function isLogin(){
 }
 
 
-function addUserNameToWelcome() {
+export function addUserNameToWelcome() {
 	if (isLogin() && getUserName() !== null) {
 		//innialText = document.getElementById("welcome_name_area").innerText;
 		document.getElementById("welcome_name_area").innerText = getUserName() + ", welcome to BACO online wine shop!" // + innialText; 

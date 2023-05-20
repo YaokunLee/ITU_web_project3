@@ -161,7 +161,7 @@ function addProductDetailInfo() {
 //   document.getElementById("wine_details").innerHTML = product.details;
 // }
 
-async function addAllHomepageProductInfo() {
+export async function addAllHomepageProductInfo() {
   let i = 1;
   const response = await fetch('http://localhost:3000/winedata');
   const winedata = await response.json();

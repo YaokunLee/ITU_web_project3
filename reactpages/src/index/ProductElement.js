@@ -6,7 +6,8 @@ class ProductList extends React.Component {
         const { products, setCurrentProductDetailPage, addItemtoBasketById } = this.props;
 
         return (
-            <div className="mainbody">
+            <div>
+                <div><h3 className="inside_text">Discover our newest premium wines</h3></div>
                 <div className="productgrid">
                     {products.map(product => (
                         <Product
