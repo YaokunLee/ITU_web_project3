@@ -14,7 +14,7 @@ all you need to know before you start to work on this project:
   **the folder data copies all js file directly from mini project1**
 
 ## How to verify React Component you create is correct?
-File App.js
+
 ```javascript
 import React from 'react';
 import './index.css';
@@ -34,6 +34,5 @@ export class Root extends React.Component{
     }
 }
 ```
-Replace the content in return() with your Component, then run, you can see if it's what you want.
-
+In File App.js, replace the content in return() with your Component, then run, you can see if it's what you want. Remember to add import xxx 
 
