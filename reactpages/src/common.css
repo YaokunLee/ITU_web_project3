@@ -1,0 +1,616 @@
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+/* input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    border: none;
+    border-radius: 50%;
+    margin-top: -5px;
+  } */
+
+.banner{
+    background-color:white;
+    text-align: center;
+
+}
+body{
+    background-color: #EDE6DB;
+    padding-bottom: 25px;
+
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color:black;
+    /* text-decoration:none; */
+    cursor:pointer;
+}
+
+.prodbox-name:hover{
+    text-decoration: underline;
+}
+h3
+{
+    font-size: 21px;
+}
+h4{
+    font-size: 18px;
+}
+.menu_dividing_line{
+    border: 0.5px solid #000000;
+    height:20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.logo{
+    width: 100px;
+    border-radius: 50px;
+}
+.icons{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.brandname{
+    font-size: 80px;
+    font-family: "Tilt Prism";
+    position: relative;
+    top: 30px;
+}
+
+
+.login
+{
+    /*position: relative;*/
+    padding:10px;
+}
+.login:hover{
+    text-decoration: underline;
+}
+.logotext{
+    font-size: medium;
+}
+
+.searchbar-area{
+    padding: 12px;
+    display: flex;
+}
+
+.searchbar{
+    text-align: center;
+    padding: 12px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.filter-btn{
+    margin-left:30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+/*
+.filters button{
+    background-color: transparent; 
+    color: black;
+    padding: 14px 50px;
+    margin: 10px;
+    font-family: "Inter";
+    font-size: 15px;
+    text-align: center;
+    border:none;
+}
+/* 
+button:hover{
+    background-color:  black; 
+    color: burlywood;
+} */
+
+
+
+.prodbox {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+@media(min-width: 1150px){
+    .productgrid{
+        /* padding-left: 80px; */
+        padding-right: 215px;
+        display: grid;
+        /* text-align: center; */
+        grid-template-columns: 33% 33% 33%;
+        column-gap: 65px;
+        row-gap: 20px;
+    }
+
+
+}
+
+
+@media(max-width: 1150px){
+    .productgrid{
+        display: grid;
+        grid-template-columns: 100%;
+        column-gap: 65px;
+        row-gap: 20px;
+    }
+    .leftside{
+        display: flex;
+        flex-direction: row;
+        row-gap: 11px;
+        padding-left: 75px;
+    }
+    .mainbody{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 105px;
+        padding-left: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.productgrid div{
+    justify-self: center;
+}
+
+.productgrid img{
+    width: 120px;
+    height: auto;
+}
+
+.inside_text{
+    font-family: "Roboto Condensed";
+    text-transform:uppercase;
+    font-weight: 400;
+}
+
+
+.prodbox .prodbox-name{
+    font-size: 25px;
+    font-family: "Roboto Condensed";
+    font-weight: 400;
+    text-transform:uppercase;
+}
+body{
+    font-family: Inter;
+}
+#search-icon{
+    width: 20px;
+    height: 20px;
+
+}
+#header {
+    position: absolute;
+    top: 10px;
+    right:20px;
+}
+.search-bar{
+    background-color: white;
+
+    width: 1000px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin: auto;
+    margin-top: 10px;
+}
+#search-btn {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+.search{
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+
+}
+
+#welcome_words_area{
+    text-align: center;
+    font-family: Inter;
+    /* margin-bottom: 20px; */
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.loginframe {
+    position: relative;
+    width: 400px;
+    height: 220px;
+    margin: auto;
+    top: 50px;
+
+    background: #FFFFFF;
+    border: 2px solid #C6C2BD;
+    padding: 70px;
+}
+
+.account {
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+
+.password{
+    position: relative;
+    right: 10px;
+    bottom: 5px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.form-input {
+    position: absolute;
+    width: 170px;
+    height: 25px;
+    left: 145px;
+    margin-top: -7px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.btn-submit{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: 70px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    text-align: center;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+.btn-add-to-cart-wide{
+    width: 300px;
+    height: 40px;
+    margin-top: 7px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    text-align: center;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+.btn-add-to-cart:hover{
+    color: white;
+    background-color: #000000;
+}
+
+.btn-add-to-cart-wide:hover{
+    color: white;
+    background-color: #000000;
+}
+
+.btn-submit:hover{
+    color: white;
+    background-color: #000000;
+}
+
+.price_quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.foot{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.footdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footbanner{
+    text-align: center;
+}
+
+.footbanner span{
+    width: 40px;
+    height: auto;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.socialmedia img{
+    width: 30px;
+    height: auto;
+}
+
+#banner{
+    width: 1000px;
+    height: 315px;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
+
+#newestProducts{
+    position:relative;
+    left:140px;
+}
+.number-form-input{
+    width: 50px;
+    text-align: center;
+}
+.list-group{
+    width: 300px;
+
+}
+.list-group-item{
+
+    font-size: 14px;
+}
+#basket_list_container{
+    font-size:small;
+}
+
+footer{
+
+    background-color: white;
+    position: relative;
+    top:200px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    flex-wrap:wrap;
+}
+
+.column-left {
+    flex-basis: 50%;
+    position: relative;
+    right:150px;
+    width: 50%;
+}
+
+.column-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column-left li {
+    margin-bottom: 10px;
+    font-size:small;
+
+}
+
+.column-left li a:hover {
+    text-decoration: underline;
+}
+
+.column-right {
+    flex-basis: 50%;
+    position: relative;
+    left:150px;
+    width: 50%;
+
+
+}
+.column-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width:215px;
+}
+.column-right li{
+    margin-bottom: 10px;
+    font-size:small;
+}
+
+.footer-h3{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.minimalistic{
+    font-size: 1px;
+}
+
+.h3_h3{
+    text-align: center;
+    margin-top:20px;
+}
+.text_text{
+    padding: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+    line-height: 30px;
+
+}
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 60px;
+}
+
+#wine_image{
+    width: 300px;
+    position: relative;
+    bottom:30px;
+}
+
+#wine_name{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 0;
+
+}
+
+#wine_price{
+
+    font-size:20px;
+
+}
+
+.btn-add-to-cart{
+    width: 170px;
+    height: 40px;
+    margin-top: 7px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    text-align: center;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.mainbody{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 105px;
+}
+
+.leftside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+}
+
+.leftside_box{
+    position: sticky;
+    top: 15px;
+}
+
+.btn-checkout:hover{
+    color: white;
+    background-color: #000000;
+}
+#basket_list_container{
+    font-size:small;
+}
+
+
+#basket_wine_remove:hover{
+    cursor:pointer;
+}
+
+.row{
+    justify-content: space-between;
+}
+
+#basket_wine_remove{
+    width:50px;
+    height: 25px;
+
+}
+.btn-checkout{
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    height: 40px;
+    margin-top: 7px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+
+    text-align: center;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+}
+    

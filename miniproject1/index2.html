@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tilt+Prism"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Staatliches"
+    />
+    <link
+      href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="common.css" />
+    <script src="basketdata.js"></script>
+    <script src="winedata.js"></script>
+    <script src="login.js"></script>
+  </head>
+
+  <body>
+      <div class="mainbody">
+          <div class="productgrid">
+            <div class="prodbox">
+              <a
+                href="product_detail.html"
+                onclick="setCurrentProductDetailPage(1)"
+              >
+                <div><img src="img/wine_1.png" alt="Red wine bottle" /></div>
+                <div class="prodbox-name" id="product_1_wine_name">Wine1</div>
+                <div class="prodbox-char">
+                  <span class="prodbox-type" id="product_1_wine_type"
+                    >Type</span
+                  >
+                  <span id="product_1_wine_from">From</span>
+                </div>
+                <div class="prodbox-price" id="product_1_wine_price">price</div>
+              </a>
+              <br />
+              <div style="text-align: center">
+                <input
+                  class="btn-add-to-cart"
+                  type="button"
+                  onclick="addItemtoBasketById(1)"
+                  value="ADD TO CART"
+                />
+              </div>
+            </div>
+          </div>
+      </div>
+    <br />
+
+    <script>
+      function onIndexStart() {
+        addUserNameToWelcome();
+        addAllHomepageProductInfo();
+      }
+      document.body.onload = onIndexStart();
+    </script>
+  </body>
+</html>

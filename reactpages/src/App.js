@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductList from "./index/ProductElement";
+import {getAllWineInfo, addItemtoBasketById, setCurrentProductDetailPage } from "./data/winedata"
 
-function App() {
-  return (
-    <h1 className="App">
-      hello world!
-    </h1>
-  );
+export class Root extends React.Component{
+    render() {
+        return (
+            <ProductList
+                products={getAllWineInfo()}
+                setCurrentProductDetailPage={setCurrentProductDetailPage}
+                addItemtoBasketById={addItemtoBasketById}
+            />
+        );
+    }
 }
-
-export default App;
