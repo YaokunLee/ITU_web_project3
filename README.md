@@ -1,5 +1,17 @@
 # ITU_web_project3
 
+## todo
+1. Pages
+- [x] index page 
+- [x] login page
+- [x] basket page
+- [ ] product detail page
+- [ ] contact page
+- [ ] about page
+- [ ] terms
+2. Document
+3. Fix all problems TAs pointed out in mini project1 and mini project2
+
 
 ## File Structure
 all you need to know before you start to work on this project:
@@ -17,7 +29,36 @@ all you need to know before you start to work on this project:
   - header (in index/Header.js)
   - footer (in index/Footer.js)
 
-## How to verify React Component you create is correct?
+## Recommended way to create a page
+
+```javascript
+class PageWrapper extends React.Component {
+
+  render() {
+    return (
+            <div>
+              <Header/>
+              <Banner/>
+              <Switch>
+                <Route path="/index" component={IndexBody}> <IndexBody/></Route>
+                <Route path="/login" component={LoginBody}/>
+                <Route path="/basket" component={BasketBody}/>
+                <Route component={IndexBody}/>
+              </Switch>
+              <Footer/>
+            </div>
+    );
+  }
+}
+```
+In the file PageWrapper.js, I have builded the framework for you. You don't need to care about Header, Banner and Footer now. These pages are all the same in all pages, and I've done them. Once you finished building the body of one page, add a Route element into Switch(see codes above) and then set link replacing original < a > element like following:
+```javascript
+<NavLink exact activeClassName="active" to="/login">Login</NavLink>
+```
+If everything you write is correct, then it should work and you can start from index to your page.
+
+
+## How to verify React Component I create is correct?
 
 ```javascript
 import React from 'react';
@@ -27,15 +68,11 @@ import ProductList from "./index/ProductElement";
 import {getAllWineInfo, addItemtoBasketById, setCurrentProductDetailPage } from "./data/winedata"
 
 export class Root extends React.Component{
-    render() {
-        return (
-            <ProductList
-                products={getAllWineInfo()}
-                setCurrentProductDetailPage={setCurrentProductDetailPage}
-                addItemtoBasketById={addItemtoBasketById}
-            />
-        );
-    }
+  render() {
+    return (
+            <PageWrapper/>
+    );
+  }
 }
 ```
 In File App.js, replace the content in return() with your Component, then run, you can see if it's what you want. Remember to add import xxx 
