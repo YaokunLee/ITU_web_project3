@@ -32,6 +32,7 @@ class Product extends React.Component {
     render() {
         const {imgSrc, name, type, from, price} = this.props;
         return (
+
             <div className="prodbox">
                 <a href="product_detail.html" onClick={() => setCurrentProductDetailPage(this.props.id)}>
                     <div><img src={process.env.PUBLIC_URL + imgSrc} alt="Red wine bottle"/></div>
