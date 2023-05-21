@@ -51,11 +51,11 @@ class PageWrapper extends React.Component {
   }
 }
 ```
-In the file PageWrapper.js, I have builded the framework for you. You don't need to care about Header, Banner and Footer now. These pages are all the same in all pages, and I've done them. Once you finished building the body of one page, add a Route element into Switch(see codes above) and then set link replacing original < a > element like following:
+In the file PageWrapper.js, I have builded the framework for you. You don't need to care about Header, Banner or Footer now. These elements are all the same in all pages, and I've done them. Once you finish building the body of one page, add a Route element into Switch(see codes above) and then set link replacing original < a > element like following:
 ```javascript
 <NavLink exact activeClassName="active" to="/login">Login</NavLink>
 ```
-If everything you write is correct, then it should work and you can start from index to your page.
+If everything you write is correct, then it should work and you can start from index jumping to your page.
 
 
 ## How to verify React Component I create is correct?
