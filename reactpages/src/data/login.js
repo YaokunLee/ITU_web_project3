@@ -15,7 +15,7 @@ export function addUserNameToWelcome() {
 	}
 }
 
-function onSubmitLogin() {
+export function onSubmitLogin() {
     let inputAccount = document.getElementById("account");
     let inputPassword = document.getElementById("password");
     if (inputAccount.value !== undefined && inputPassword.value !== undefined 

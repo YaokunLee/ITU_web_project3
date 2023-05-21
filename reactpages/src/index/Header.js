@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
 class Header extends React.Component {
     render() {
@@ -6,7 +7,7 @@ class Header extends React.Component {
             <header id="header">
                 <div style={{display: 'flex'}}>
                     <div className="login">
-                        <a href="login.html">Login</a>
+                        <NavLink exact activeClassName="active" to="/login">Login</NavLink>
                     </div>
                     <div>
                         <a href="basket.html">
