@@ -28,7 +28,7 @@ all you need to know before you start to work on this project:
 
 ## Recommended way to create a page
 ### how to start?
-Go check the <body> element of corresponding html page, delete elements including <header> <footer> <banner> and see what is left. The left html elements are you need to work on. You need to transform these left htmls into React Component. Building from small elements, you should eventually get a React Component which represents all left htmls. 
+Go check the \<body\> element of corresponding html page, delete elements including \<header\> \<footer\> \<banner\> and see what is left. The left html elements are you need to work on. You need to transform these left htmls into React Component. Building from small elements, you should eventually get a React Component which represents all left htmls. 
 
 ### how to verify a page
 ```javascript
