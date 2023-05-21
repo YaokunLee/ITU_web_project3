@@ -11,6 +11,7 @@
 - [ ] terms
 2. Document
 3. Fix all problems TAs pointed out in mini project1 and mini project2
+4. Using TypeScript to rewrite (if you want)
 
 
 ## File Structure
