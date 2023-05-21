@@ -12,8 +12,6 @@ class MainBody extends React.Component {
                 <LeftSideBox/>
                 <ProductList
                     products={getAllWineInfo()}
-                    setCurrentProductDetailPage={setCurrentProductDetailPage}
-                    addItemtoBasketById={addItemtoBasketById}
                 />
             </div>
         );

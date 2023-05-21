@@ -5,6 +5,7 @@ import Footer from "./index/Footer";
 import {Route, Switch} from "react-router-dom";
 import IndexBody from "./index/IndexBody";
 import LoginBody from "./login/loginBody";
+import BasketBody from "./basket/basket";
 class PageWrapper extends React.Component {
 
     render() {
@@ -15,6 +16,7 @@ class PageWrapper extends React.Component {
                 <Switch>
                     <Route path="/index" component={IndexBody}> <IndexBody/></Route>
                     <Route path="/login" component={LoginBody}/>
+                    <Route path="/basket" component={BasketBody}/>
                     <Route component={IndexBody}/>
                 </Switch>
                 <Footer/>

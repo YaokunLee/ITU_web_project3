@@ -10,14 +10,14 @@ class Header extends React.Component {
                         <NavLink exact activeClassName="active" to="/login">Login</NavLink>
                     </div>
                     <div>
-                        <a href="basket.html">
+                        <NavLink exact activeClassName="active" to="/basket">
                             <img
                                 src={process.env.PUBLIC_URL + "/img/shopping_cart_icon.png"}
                                 alt="shopping cart icon"
                                 className="icons"
                                 id="#icon-change"
                             />
-                        </a>
+                        </NavLink>
                         &nbsp;&nbsp;
                     </div>
                 </div>
