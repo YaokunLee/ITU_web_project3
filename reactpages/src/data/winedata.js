@@ -147,6 +147,8 @@ const wineShop = [
   }
 ];
 
+export default wineShop;
+
 function getWineInfo(i) {
   if (i < 0 || i >= wineShop.length) {
     return "Invalid index";
@@ -158,20 +160,6 @@ export function getAllWineInfo() {
   return wineShop;
 }
 
-function addProductDetailInfo() {
-  let product;
-  product = getWineInfo( localStorage.getItem("current_product_detail_page_num") - 1);
-	document.getElementById("wine_name").innerText = product.name;
-	document.getElementById("wine_price").innerText = "$" + product.price;
-	document.getElementById("wine_type").innerText = product.type;
-	document.getElementById("wine_country").innerText = product.country;
-	document.getElementById("wine_year").innerText = product.vintage;
-	document.getElementById("wine_brand").innerText = product.brand;
-	document.getElementById("wine_image").src = "img/wine_" + localStorage.getItem("current_product_detail_page_num") + ".png";
-}
-// function addProductDetailsInfo(){
-//   document.getElementById("wine_details").innerHTML = product.details;
-// }
 
 export async function addAllHomepageProductInfo() {
   let i = 1;
@@ -183,6 +171,34 @@ export async function addAllHomepageProductInfo() {
     i = i + 1;
   });
 }
+
+export async function addOneProductInfo() {
+  let i = 1;
+  const response = await fetch('http://localhost:3000/winedata/:id');
+  const winedata = await response.json();
+  
+  winedata.forEach(element => {
+    addProductDetailInfo(element, i);
+    //i = i + 1;
+  });
+}
+
+export function addProductDetailInfo() {
+  let product;
+	product = getWineInfo( localStorage.getItem("current_product_detail_page_num") - 1);
+	document.getElementById("wine_name").innerText = product.name;
+	document.getElementById("wine_price").innerText = "$" + product.price;
+	document.getElementById("wine_type").innerText = product.type;
+	document.getElementById("wine_country").innerText = product.country;
+	document.getElementById("wine_year").innerText = product.vintage;
+	document.getElementById("wine_brand").innerText = product.brand;
+	document.getElementById("wine_image").src = "img/wine_" + localStorage.getItem("current_product_detail_page_num") + ".png";
+}
+//function addProductDetailsInfo(){
+//  document.getElementById("wine_details").innerHTML = product.details;
+//}
+
+
 function addCountryProductInfo(country) {
   var i = 1;
   wineShop.filter(wine => wine.country === country)
@@ -248,10 +264,7 @@ function changeColor(){ //for later use
         }
       });
     });
-  });
-  
-
+  }); 
 }
-
 
 

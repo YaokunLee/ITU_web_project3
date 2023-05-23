@@ -55,7 +55,7 @@ class LeftSideBox extends React.Component {
                     <CheckBoxGroup name="filter" options={typeOptions} />
                     <br />
                     <h4 className="inside_text">Up to this price</h4>
-                    <form action="">
+                    <form action="reactpages/src/index">
                         <span>$0</span>
                         <input type="range" id="price-range" name="price-range" min="0" max="100" value="0" />
                         <span>$100</span>
