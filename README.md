@@ -13,12 +13,21 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 - [x] login page
 - [x] basket page
 - [ ] product detail page
-- [ ] contact page
+- [x] contact page
 - [x] about page
-- [ ] terms
+- [x] terms
 
 2. Document
-3. Fix all problems TAs pointed out in mini project1 and mini project2
+
+3. Fix all problems TAs pointed out in mini project1 and mini project2 + requirements
+
+- [ ] Filter = Users can browse products using at least two different product categories.
+- [ ] log out option
+- [ ] data validation in log in form
+- [ ] data validation in log in form
+- [ ] Add posibility of adding more bottles on the shopping cart page
+- [ ] fix - delete button in shopping cart page is not working anymore
+
 4. Using TypeScript to rewrite (if you want) - I think it is a criteria we have to use it
 
 ## File Structure
