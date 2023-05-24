@@ -1,11 +1,13 @@
 import React from "react";
 import '../common.css';
-import addOneProductInfo from "../data/winedata";
+import addProductDetailInfo from "../data/winedata";
 import ProductDetailPage from "./ProductPage";
 
 class ProductPageBody extends React.Component {
     componentDidMount() {
-        addOneProductInfo();
+        //addOneProductInfo();
+        addProductDetailInfo();
+
     }
     render() {
         return (

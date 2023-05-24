@@ -7,6 +7,7 @@ import IndexBody from "./index/IndexBody";
 import LoginBody from "./login/loginBody";
 import BasketBody from "./basket/basket";
 import ProductPageBody from "./productdetail/ProductDetail";
+import AboutBody from './about/AboutBody';
 
 class PageWrapper extends React.Component {
 
@@ -20,6 +21,7 @@ class PageWrapper extends React.Component {
                     <Route path="/login" component={LoginBody}/>
                     <Route path="/basket" component={BasketBody}/>
                     <Route path="/productdetail/:id/" component={ProductPageBody}/> 
+                    <Route path="/about" component={AboutBody}/>
                     <Route component={IndexBody}/>
                 </Switch>
                 <Footer/>
