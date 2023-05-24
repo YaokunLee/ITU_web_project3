@@ -1,9 +1,9 @@
 # ITU_web_project3
+
 ## package version
+
 make sure you install react-router, react-router-dom@5.3.0, bootstrap
 The version of react-router-dom should be 5.3.0, otherwise it may cause problems.
-
-
 
 ## todo
 
@@ -14,7 +14,7 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 - [x] basket page
 - [ ] product detail page
 - [ ] contact page
-- [ ] about page
+- [x] about page
 - [ ] terms
 
 2. Document

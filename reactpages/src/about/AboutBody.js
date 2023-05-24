@@ -1,5 +1,4 @@
 import React from 'react';
-import reactRouterDom from 'react-router-dom';
 import '../common.css';
 import About from './About';
 
