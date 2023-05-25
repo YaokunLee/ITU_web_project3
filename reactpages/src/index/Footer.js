@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
 class AboutUs extends React.Component {
     render() {
@@ -6,10 +7,10 @@ class AboutUs extends React.Component {
             <div className="column-left">
                 <h3 className="footer-h3 inside_text">About</h3>
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><NavLink exact activeClassName="active" to="/about">About Us</NavLink></li>
+                    <li><NavLink exact activeClassName="active" to="/contact">Contact Us</NavLink></li>
                     <li>
-                        <a href="terms_and_conditions.html">Terms and Conditions</a>
+                        <NavLink exact activeClassName="active" to="/terms">Terms and Conditions</NavLink>
                     </li>
                 </ul>
             </div>
