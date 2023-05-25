@@ -7,6 +7,17 @@ function LoginForm() {
 
     const onUserSubmitLogin = (event) => {
         event.preventDefault();
+
+        if (!/^[A-Za-z0-9]+$/.test(username)) {
+            alert("Username should be numbers and letters only!");
+            return;
+        }
+
+        if (password.length <= 5) {
+            alert("Your password must be more than 5 characters!");
+            return;
+        }
+
         // 处理登录表单提交的逻辑
         onSubmitLogin(username, password);
     };
