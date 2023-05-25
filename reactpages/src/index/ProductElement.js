@@ -1,6 +1,7 @@
 import React from 'react';
 import '../common.css'; // 导入样式文件
 import {setCurrentProductDetailPage, addItemtoBasketById} from "../data/winedata";
+import {BasketContext} from "../BasketContext";
 
 class ProductList extends React.Component {
     render() {
@@ -32,27 +33,35 @@ class Product extends React.Component {
     render() {
         const {imgSrc, name, type, from, price} = this.props;
         return (
-
-            <div className="prodbox">
-                <a href="product_detail.html" onClick={() => setCurrentProductDetailPage(this.props.id)}>
-                    <div><img src={process.env.PUBLIC_URL + imgSrc} alt="Red wine bottle"/></div>
-                    <div className="prodbox-name">{name}</div>
-                    <div className="prodbox-char">
-                        <span className="prodbox-type">{type}</span>
-                        <span>{from}</span>
+            <BasketContext.Consumer>
+                {({addBasketItem}) => (
+                    <div className="prodbox">
+                        <a href="product_detail.html" onClick={() => setCurrentProductDetailPage(this.props.id)}>
+                            <div><img src={process.env.PUBLIC_URL + imgSrc} alt="Red wine bottle"/></div>
+                            <div className="prodbox-name">{name}</div>
+                            <div className="prodbox-char">
+                                <span className="prodbox-type">{type}</span>
+                                <span>{from}</span>
+                            </div>
+                            <div className="prodbox-price">{price}</div>
+                        </a>
+                        <br/>
+                        <div style={{textAlign: 'center'}}>
+                            <input
+                                className="btn-add-to-cart"
+                                type="button"
+                                onClick={() => addBasketItem({
+                                    name:name,
+                                    price:price,
+                                    num:1,
+                                    totalPrice:price
+                                })}
+                                value="ADD TO CART"
+                            />
+                        </div>
                     </div>
-                    <div className="prodbox-price">{price}</div>
-                </a>
-                <br/>
-                <div style={{textAlign: 'center'}}>
-                    <input
-                        className="btn-add-to-cart"
-                        type="button"
-                        onClick={() => addItemtoBasketById(this.props.id)}
-                        value="ADD TO CART"
-                    />
-                </div>
-            </div>
+                )}
+            </BasketContext.Consumer>
         );
     }
 }
