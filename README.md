@@ -27,7 +27,7 @@ make sure you run "npm install" as the listed version in package.json
 - [ ] Add posibility of adding more bottles on the shopping cart page
 - [x] fix - delete button in shopping cart page is not working anymore
 
-4. ~~Using TypeScript to rewrite (if you want)
+4. ~~Using TypeScript to rewrite (if you want)~~
 
 ## File Structure
 
