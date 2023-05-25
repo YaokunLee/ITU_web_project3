@@ -12,7 +12,7 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 - [x] index page
 - [x] login page
 - [x] basket page
-- [ ] product detail page
+- [x] product detail page
 - [x] contact page
 - [x] about page
 - [x] terms
@@ -26,7 +26,7 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 - [x] data validation in log in form
 - [x] data validation in log in form
 - [ ] Add posibility of adding more bottles on the shopping cart page
-- [ ] fix - delete button in shopping cart page is not working anymore
+- [x] fix - delete button in shopping cart page is not working anymore
 
 4. Using TypeScript to rewrite (if you want) - I think it is a criteria we have to use it
 
