@@ -75,7 +75,7 @@ class PageWrapper extends React.Component {
 }
 ```
 
-In the file PageWrapper.js, I have builded the framework for you. You don't need to care about Header, Banner or Footer now. These elements are all the same in all pages, and I've done them. Once you finish building the body of one page, add a Route element into Switch(see codes above) and then set link replacing original < a > element like following:
+In the file PageWrapper.tsx, I have builded the framework for you. You don't need to care about Header, Banner or Footer now. These elements are all the same in all pages, and I've done them. Once you finish building the body of one page, add a Route element into Switch(see codes above) and then set link replacing original < a > element like following:
 
 ```javascript
 <NavLink exact activeClassName="active" to="/login">
