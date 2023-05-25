@@ -1,6 +1,6 @@
 import React from 'react';
 import '../common.css';
-import Terms from './terms';
+import Terms from './Terms';
 
 class TermsBody extends React.Component {
 
