@@ -14,9 +14,6 @@ function About() {
                 <p>Thank you for choosing Baco, and we look forward to sharing our love of wine with you.</p>
             </div>
         </div>
-
-
-
     );
 
 }

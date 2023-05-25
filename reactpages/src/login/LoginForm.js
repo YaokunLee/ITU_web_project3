@@ -23,6 +23,7 @@ class LoginForm extends React.Component {
 
         if (password.length <= 5) {
             alert("Your password must be more than 5 characters!");
+            return;
         }
 
         login(username, password);
