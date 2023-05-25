@@ -22,7 +22,7 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 3. Fix all problems TAs pointed out in mini project1 and mini project2 + requirements
 
 - [ ] Filter = Users can browse products using at least two different product categories.
-- [ ] log out option
+- [x] log out option
 - [x] data validation in log in form
 - [x] data validation in log in form
 - [ ] Add posibility of adding more bottles on the shopping cart page
