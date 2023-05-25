@@ -6,7 +6,7 @@ import {Route, Switch} from "react-router-dom";
 import IndexBody from "./index/IndexBody";
 import LoginBody from "./login/loginBody";
 import BasketBody from "./basket/basket";
-import ProductPageBody from "./productdetail/ProductDetail";
+import ProductBody from "./productdetail/ProductBody";
 import AboutBody from "./about/AboutBody";
 import TermsBody from "./terms/TermsBody";
 import ContactBody from "./contact/ContactBody";
@@ -28,7 +28,7 @@ class PageWrapper extends React.Component {
                         <Route path="/index" component={IndexBody}> <IndexBody/></Route>
                         <Route path="/login" component={LoginBody}/>
                         <Route path="/basket" component={BasketBody}/>
-                        <Route path="/productdetail/:id/" component={ProductPageBody}/>
+                        <Route path="/productdetail" component={ProductBody}/>
                         <Route path="/about" component={AboutBody}/>
                         <Route path="/terms" component={TermsBody}/>
                         <Route path="/contact" component={ContactBody}/>

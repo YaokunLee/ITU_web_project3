@@ -2,7 +2,7 @@ import React from 'react';
 import '../common.css';
 import LeftSideBox from "./LeftFilter";
 import ProductList from "./ProductElement";
-import {getAllWineInfo, setCurrentProductDetailPage, addItemtoBasketById} from "../data/winedata";
+import {getAllWineInfo} from "../data/winedata";
 
 class MainBody extends React.Component {
 

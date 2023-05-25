@@ -1,14 +1,9 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
 import MainBody from "./MainBody";
-import {addAllHomepageProductInfo} from "../data/winedata";
 import {UserContext} from '../context/UserContext';
 
 class IndexBody extends React.Component {
-
-    componentDidMount() {
-        addAllHomepageProductInfo();
-    }
 
     render() {
         return (

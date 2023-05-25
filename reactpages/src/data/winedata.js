@@ -1,4 +1,3 @@
-import {getBasketMap, saveBasketMap} from "./basketdata"
 
 const wineShop = [
   {
@@ -149,7 +148,7 @@ const wineShop = [
 
 export default wineShop;
 
-function getWineInfo(i) {
+export function getWineInfo(i) {
   if (i < 0 || i >= wineShop.length) {
     return "Invalid index";
   }
@@ -160,111 +159,6 @@ export function getAllWineInfo() {
   return wineShop;
 }
 
-
-export async function addAllHomepageProductInfo() {
-  let i = 1;
-  const response = await fetch('http://localhost:3000/winedata');
-  const winedata = await response.json();
-
-  winedata.forEach(element => {
-    addHomepageProductInfo(element, i);
-    i = i + 1;
-  });
+export function addProductDetailInfo(id) {
+  return getWineInfo(id);
 }
-
-export async function addOneProductInfo() {
-  let i = 1;
-  const response = await fetch('http://localhost:3000/winedata/:id');
-  const winedata = await response.json();
-  
-  winedata.forEach(element => {
-    addProductDetailInfo(element, i);
-    //i = i + 1;
-  });
-}
-
-export function addProductDetailInfo() {
-  let product;
-	product = getWineInfo( localStorage.getItem("current_product_detail_page_num") - 1);
-	document.getElementById("wine_name").innerText = product.name;
-	document.getElementById("wine_price").innerText = "$" + product.price;
-	document.getElementById("wine_type").innerText = product.type;
-	document.getElementById("wine_country").innerText = product.country;
-	document.getElementById("wine_year").innerText = product.vintage;
-	document.getElementById("wine_brand").innerText = product.brand;
-	document.getElementById("wine_image").src = "img/wine_" + localStorage.getItem("current_product_detail_page_num") + ".png";
-}
-//function addProductDetailsInfo(){
-//  document.getElementById("wine_details").innerHTML = product.details;
-//}
-
-
-function addCountryProductInfo(country) {
-  var i = 1;
-  wineShop.filter(wine => wine.country === country)
-          .forEach(element =>  {
-            addHomepageProductInfo(element, i);
-            i = i + 1;
-        })
-}
-
-function addHomepageProductInfo(product, i) {
-	document.getElementById("product_"+ i + "_wine_name").innerText = product.name;
-	document.getElementById("product_"+ i + "_wine_type").innerText = product.type + " wine";
-	document.getElementById("product_"+ i + "_wine_from").innerText = "from " + product.country;
-	/*document.getElementById("product_"+ i + "_wine_country").innerText = product.country;*/
-	document.getElementById("product_"+ i + "_wine_price").innerText = product.price + " $";
-	// document.getElementById("wine_image").src = "img/wine_" + (i + 1) + ".webp";
-}
-
-function onClickAddtoBasket2(price, n , name) {
-	var basketItemsMap = getBasketMap()
-
-	var num = n
-	var totalPrice = price * num;
-
-	var originNum = basketItemsMap.get(name);
-	if (originNum != null && originNum !== undefined) {
-		num = num + originNum.num
-		totalPrice = price * num
-	}
-
-	basketItemsMap.set(name, {
-		num: num,
-		price:"$" + price,
-		name : name,
-		totalPrice: "$" + totalPrice 
-	})
-	saveBasketMap(basketItemsMap);
-	alert("Add to basket successfully!");
-  }
-
-export function addItemtoBasketById(i) {
-  let wineInfo = getWineInfo(i);
-  onClickAddtoBasket2(wineInfo.price, 1 , wineInfo.name)
-}
-
-export function setCurrentProductDetailPage(i) {
-  localStorage.setItem("current_product_detail_page_num", i);
-}
-
-function changeColor(){ //for later use
-
-  const filterBtns = document.querySelectorAll('.filter-btn');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Change the color of the clicked button to red
-      btn.style.color = "#756e62";
-  
-      // Reset the color of the other buttons
-      filterBtns.forEach(otherBtn => {
-        if (otherBtn !== btn) {
-          otherBtn.style.color = '';
-        }
-      });
-    });
-  }); 
-}
-
-

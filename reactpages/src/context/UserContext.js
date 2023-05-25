@@ -12,8 +12,16 @@ class UserProvider extends React.Component {
             password: "",
             logout: this.logout,
             login: this.login,
+            product_id: 0,
+            setProductId: this.setProductId,
         };
     }
+
+    setProductId = (i) => {
+        this.setState({
+            product_id: i
+        });
+    };
 
     logout = () => {
         this.setState({
