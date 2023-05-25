@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import {onSubmitLogin} from "../data/login"
+import React from 'react';
+import {UserContext} from '../UserContext';
+import { withRouter } from 'react-router-dom';
 
-function LoginForm() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+class LoginForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: ''
+        };
+    }
 
-    const onUserSubmitLogin = (event) => {
+    onUserSubmitLogin = (event, login) => {
         event.preventDefault();
+
+        const { username, password } = this.state;
 
         if (!/^[A-Za-z0-9]+$/.test(username)) {
             alert("Username should be numbers and letters only!");
@@ -15,40 +23,56 @@ function LoginForm() {
 
         if (password.length <= 5) {
             alert("Your password must be more than 5 characters!");
-            return;
         }
 
-        // 处理登录表单提交的逻辑
-        onSubmitLogin(username, password);
+        login(username, password);
+        this.props.history.push('/index');
     };
 
-    return (
-        <div className="login_form">
-            <br />
-            <br />
-            <div className="container-fluid">
-                <form className="loginframe" onSubmit={onUserSubmitLogin}>
-                    <label className="account">Name:</label>
-                    <input
-                        className="form-input"
-                        id="account"
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    /><br/><p></p>
-                    <label className="password">Password:</label>
-                    <input
-                        className="form-input"
-                        id="password"
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    /><br/><br/>
-                    <input className="btn-submit" type="submit" value="SUBMIT" />
-                </form>
-            </div>
-        </div>
-    );
+    handleInputChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    };
+
+    render() {
+        const { username, password } = this.state;
+
+        return (
+            <UserContext.Consumer>
+                {({login}) => (
+                    <div className="login_form">
+                        <br/>
+                        <br/>
+                        <div className="container-fluid">
+                            <form className="loginframe" onSubmit={(event) =>
+                                this.onUserSubmitLogin(event, login)}>
+                                <label className="account">Name:</label>
+                                <input
+                                    className="form-input"
+                                    id="account"
+                                    type="text"
+                                    name="username"
+                                    value={username}
+                                    onChange={this.handleInputChange}
+                                /><br/><p></p>
+                                <label className="password">Password:</label>
+                                <input
+                                    className="form-input"
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    value={password}
+                                    onChange={this.handleInputChange}
+                                /><br/><br/>
+                                <input className="btn-submit" type="submit" value="SUBMIT"/>
+                            </form>
+                        </div>
+                    </div>
+                )}
+            </UserContext.Consumer>
+        );
+    }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

@@ -2,7 +2,7 @@ import React from 'react';
 
 class BasketItem extends React.Component {
     removeBasketItem = (itemName) => {
-        // 这里应该有移除篮子中物品的代码
+        // todo
         console.log(`Removed item: ${itemName}`);
     };
 

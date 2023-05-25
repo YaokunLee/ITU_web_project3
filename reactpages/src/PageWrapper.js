@@ -1,21 +1,25 @@
-import React from 'react';
+import UserProvider from './UserContext';
 import Header from "./index/Header";
 import Banner from "./index/Banner";
-import Footer from "./index/Footer";
+import React from 'react';
 import {Route, Switch} from "react-router-dom";
 import IndexBody from "./index/IndexBody";
 import LoginBody from "./login/loginBody";
 import BasketBody from "./basket/basket";
 import ProductPageBody from "./productdetail/ProductDetail";
-import AboutBody from './about/AboutBody';
-import TermsBody from './terms/TermsBody';
-import ContactBody from './contact/ContactBody';
+import AboutBody from "./about/AboutBody";
+import TermsBody from "./terms/TermsBody";
+import ContactBody from "./contact/ContactBody";
+import Footer from "./index/Footer";
 
 class PageWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
-            <div>
+            <UserProvider>
                 <Header/>
                 <Banner/>
                 <Switch>
@@ -29,7 +33,7 @@ class PageWrapper extends React.Component {
                     <Route component={IndexBody}/>
                 </Switch>
                 <Footer/>
-            </div>
+            </UserProvider>
         );
     }
 }
