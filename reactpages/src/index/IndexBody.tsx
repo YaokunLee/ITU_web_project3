@@ -20,7 +20,7 @@ class IndexBody extends Component {
                         <SearchBar />
                         <br />
                         <br />
-                        <MainBody />
+                        <MainBody origin={""} type={""}/>
                         <br />
                     </div>
                 )}

@@ -165,6 +165,26 @@ export function getWineInfo(id: number): Wine {
   return wineShop[id];
 }
 
-export function getAllWineInfo(): Wine[] {
-  return wineShop;
+export function getAllWineInfo(origin:string, type:string): Wine[] {
+  if (type !== '') {
+    let types = wineShop.filter((item) => {
+      return item.type === type;
+    });
+    if (origin === '') {
+      return types;
+    } else {
+      return types.filter((item) => {
+        return item.country === origin;
+      });
+    }
+  } else {
+    if (origin === '') {
+      return wineShop;
+    } else {
+      return wineShop.filter((item) => {
+        return item.country === origin;
+      });
+    }
+  }
 }
+
