@@ -23,8 +23,8 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 
 - [ ] Filter = Users can browse products using at least two different product categories.
 - [ ] log out option
-- [ ] data validation in log in form
-- [ ] data validation in log in form
+- [x] data validation in log in form
+- [x] data validation in log in form
 - [ ] Add posibility of adding more bottles on the shopping cart page
 - [ ] fix - delete button in shopping cart page is not working anymore
 
