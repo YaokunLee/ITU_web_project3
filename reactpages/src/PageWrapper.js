@@ -1,4 +1,4 @@
-import UserProvider from './UserContext';
+import UserProvider from './context/UserContext';
 import Header from "./index/Header";
 import Banner from "./index/Banner";
 import React from 'react';
@@ -11,7 +11,7 @@ import AboutBody from "./about/AboutBody";
 import TermsBody from "./terms/TermsBody";
 import ContactBody from "./contact/ContactBody";
 import Footer from "./index/Footer";
-import BasketProvider from "./BasketContext";
+import BasketProvider from "./context/BasketContext";
 
 class PageWrapper extends React.Component {
     constructor(props) {

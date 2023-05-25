@@ -1,5 +1,5 @@
 import React from 'react';
-import basketList from "./basket/BasketList";
+import basketList from "../basket/BasketList";
 export const BasketContext = React.createContext({});
 
 class BasketProvider extends React.Component {

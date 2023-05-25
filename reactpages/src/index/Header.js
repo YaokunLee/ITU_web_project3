@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {UserContext} from '../UserContext';
+import {UserContext} from '../context/UserContext';
 
 class Header extends React.Component {
 

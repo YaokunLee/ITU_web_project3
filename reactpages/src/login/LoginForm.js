@@ -1,5 +1,5 @@
 import React from 'react';
-import {UserContext} from '../UserContext';
+import {UserContext} from '../context/UserContext';
 import { withRouter } from 'react-router-dom';
 
 class LoginForm extends React.Component {

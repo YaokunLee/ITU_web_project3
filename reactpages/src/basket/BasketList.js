@@ -1,6 +1,6 @@
 import React from 'react';
 import BasketItem from './BasketItem';
-import BasketProvider, {BasketContext} from "../BasketContext";
+import BasketProvider, {BasketContext} from "../context/BasketContext";
 
 class BasketListContainer extends React.Component {
     render() {

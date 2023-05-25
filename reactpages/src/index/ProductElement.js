@@ -1,7 +1,7 @@
 import React from 'react';
 import '../common.css'; // 导入样式文件
 import {setCurrentProductDetailPage, addItemtoBasketById} from "../data/winedata";
-import {BasketContext} from "../BasketContext";
+import {BasketContext} from "../context/BasketContext";
 
 class ProductList extends React.Component {
     render() {

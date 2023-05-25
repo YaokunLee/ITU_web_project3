@@ -1,5 +1,5 @@
 import React from 'react';
-import {BasketContext} from "../BasketContext";
+import {BasketContext} from "../context/BasketContext";
 
 class BasketItem extends React.Component {
     render() {
