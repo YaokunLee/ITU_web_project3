@@ -3,7 +3,9 @@ import { UserContext, UserContextType } from '../context/UserContext';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 interface LoginFormState {
-    username: string;
+    firstname: string;
+    lastname: string;
+    email: string;
     password: string;
 }
 
@@ -13,7 +15,9 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
     constructor(props: LoginFormProps) {
         super(props);
         this.state = {
-            username: '',
+            firstname:'',
+            lastname:'',
+            email: '',
             password: ''
         };
     }
@@ -21,10 +25,19 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
     onUserSubmitLogin = (event: FormEvent<HTMLFormElement>, login: UserContextType['login']) => {
         event.preventDefault();
 
-        const { username, password } = this.state;
+        const { firstname, lastname, email , password } = this.state;
 
-        if (!/^[A-Za-z0-9]+$/.test(username)) {
-            alert('Username should be numbers and letters only!');
+        if (!/^[A-Za-z]+$/.test(firstname)) {
+            alert('first name should be letters only!');
+            return;
+        }
+        if (!/^[A-Za-z]+$/.test(lastname)) {
+            alert('last name should be letters only!');
+            return;
+        }
+
+        if (!/^[\w.-]+@[A-Za-z]+\.[A-Za-z]+$/.test(email)) {
+            alert('Email address should be valid!');
             return;
         }
 
@@ -33,7 +46,7 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
             return;
         }
 
-        login(username, password);
+        login(firstname, password);
 
         const { history } = this.props;
         history.push('/index');
@@ -46,7 +59,7 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
     };
 
     render() {
-        const { username, password } = this.state;
+        const { firstname, lastname, email,  password } = this.state;
 
         return (
             <UserContext.Consumer>
@@ -56,13 +69,31 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
                         <br />
                         <div className="container-fluid">
                             <form className="loginframe" onSubmit={(event) => this.onUserSubmitLogin(event, login)}>
-                                <label className="account">Name:</label>
+                                <label className="account">First Name:</label>
                                 <input
                                     className="form-input"
                                     id="account"
                                     type="text"
-                                    name="username"
-                                    value={username}
+                                    name="firstname"
+                                    value={firstname}
+                                    onChange={this.handleInputChange}
+                                /><br /><p></p>
+                                <label className="account">Last Name:</label>
+                                <input
+                                    className="form-input"
+                                    id="account"
+                                    type="text"
+                                    name="lastname"
+                                    value={lastname}
+                                    onChange={this.handleInputChange}
+                                /><br /><p></p>
+                                <label className="account">Email:</label>
+                                <input
+                                    className="form-input"
+                                    id="account"
+                                    type="text"
+                                    name="email"
+                                    value={email}
                                     onChange={this.handleInputChange}
                                 /><br /><p></p>
                                 <label className="password">Password:</label>
@@ -73,7 +104,9 @@ class LoginForm extends Component<LoginFormProps, LoginFormState> {
                                     name="password"
                                     value={password}
                                     onChange={this.handleInputChange}
-                                /><br /><br />
+                                />
+                                <br />
+                                <br />
                                 <input className="btn-submit" type="submit" value="SUBMIT" />
                             </form>
                         </div>

@@ -168,7 +168,3 @@ export function getWineInfo(id: number): Wine {
 export function getAllWineInfo(): Wine[] {
   return wineShop;
 }
-
-export function addProductDetailInfo(id: number): Wine | string {
-  return getWineInfo(id);
-}
