@@ -9,6 +9,6 @@ basketRouter.use(express.json())
 
 // route handlers
 basketRouter.get("/basket/:name", getBasketByUserName);
-basketRouter.put("/basket/updateAllItems", updateBasketByUserName);
-basketRouter.put("/basket/updateOneItem", updateOneItemInBasket);
-basketRouter.delete("/basket/deleteOneItem", deleteOneItemInBasket);
+basketRouter.put("/basket/allitems", updateBasketByUserName);
+basketRouter.put("/basket/oneitem", updateOneItemInBasket);
+basketRouter.delete("/basket/oneitem", deleteOneItemInBasket);
