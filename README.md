@@ -1,9 +1,8 @@
 # ITU_web_project3
 
-## package version
 
-make sure you install react-router, react-router-dom@5.3.0, bootstrap
-The version of react-router-dom should be 5.3.0, otherwise it may cause problems.
+## package version
+make sure you run "npm install" as the listed version in package.json
 
 ## todo
 
@@ -21,14 +20,14 @@ The version of react-router-dom should be 5.3.0, otherwise it may cause problems
 
 3. Fix all problems TAs pointed out in mini project1 and mini project2 + requirements
 
-- [ ] Filter = Users can browse products using at least two different product categories.
+- [x] Filter = Users can browse products using at least two different product categories.
 - [x] log out option
 - [x] data validation in log in form
 - [x] data validation in log in form
 - [ ] Add posibility of adding more bottles on the shopping cart page
 - [x] fix - delete button in shopping cart page is not working anymore
 
-4. Using TypeScript to rewrite (if you want) - I think it is a criteria we have to use it
+4. ~~Using TypeScript to rewrite (if you want)
 
 ## File Structure
 
