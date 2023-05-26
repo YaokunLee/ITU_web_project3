@@ -165,6 +165,12 @@ export function getWineInfo(id: number): Wine {
   return wineShop[id];
 }
 
+export function getWineByName(name: string): Wine[] {
+  const lowercaseName = name.toLowerCase();
+  return wineShop.filter(wine => wine.name.toLowerCase() === lowercaseName);
+}
+
+
 export function getAllWineInfo(origin:string, type:string): Wine[] {
   if (type !== '') {
     let types = wineShop.filter((item) => {

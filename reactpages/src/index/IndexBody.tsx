@@ -17,9 +17,7 @@ class IndexBody extends Component {
                             <img id="banner" src="img/wine_day_extra_narrow.jpg" alt="Banner Event" />
                         </div>
 
-                        <SearchBar />
-                        <br />
-                        <br />
+
                         <MainBody origin={""} type={""}/>
                         <br />
                     </div>
